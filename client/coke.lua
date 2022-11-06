@@ -58,7 +58,7 @@ local function ProcessCoke()
 		disableMouse = false,
 		disableCombat = true,
 	}, {}, {}, {}, function()
-		TriggerServerEvent('ps-drugprocessing:processCocaLeaf')
+		TriggerServerEvent('ps-drugprocessing:processcoke_pure')
 
 		local timeLeft = Config.Delays.CokeProcessing / 1000
 		while timeLeft > 0 do

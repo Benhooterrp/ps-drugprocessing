@@ -1,31 +1,31 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-RegisterServerEvent('ps-drugprocessing:pickedUpCocaLeaf', function()
+RegisterServerEvent('ps-drugprocessing:pickedUpcoke_pure', function()
 	local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
 
-	if Player.Functions.AddItem("coca_leaf", 1) then 
-		TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["coca_leaf"], "add")
-		TriggerClientEvent('QBCore:Notify', src, Lang:t("success.coca_leaf"), "success")
+	if Player.Functions.AddItem("coke_pure", 1) then 
+		TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["coke_pure"], "add")
+		TriggerClientEvent('QBCore:Notify', src, Lang:t("success.coke_pure"), "success")
 	else
-		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_coca_leaf"), "error")
+		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_coke_pure"), "error")
 	end
 end)
 
-RegisterServerEvent('ps-drugprocessing:processCocaLeaf', function()
+RegisterServerEvent('ps-drugprocessing:processcoke_pure', function()
 	local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
-	if Player.Functions.RemoveItem('coca_leaf', Config.CokeProcessing.CokeLeaf) then
-		if Player.Functions.AddItem('coke', Config.CokeProcessing.ProcessCokeLeaf) then
-			TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['coca_leaf'], "remove", Config.CokeProcessing.CokeLeaf)
-			TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['coke'], "add", Config.CokeProcessing.ProcessCokeLeaf)
+	if Player.Functions.RemoveItem('coke_pure', Config.CokeProcessing.coke_pure) then
+		if Player.Functions.AddItem('coke', Config.CokeProcessing.Processcoke_pure) then
+			TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['coke_pure'], "remove", Config.CokeProcessing.coke_pure)
+			TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['coke'], "add", Config.CokeProcessing.Processcoke_pure)
 			TriggerClientEvent('QBCore:Notify', src, Lang:t("success.coke"), "success")
 		else
-			Player.Functions.AddItem('coca_leaf', Config.CokeProcessing.CokeLeaf)
+			Player.Functions.AddItem('coke_pure', Config.CokeProcessing.coke_pure)
 		end
 	else
-		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_coca_leaf"), "error")
+		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_coke_pure"), "error")
 	end
 end)
 

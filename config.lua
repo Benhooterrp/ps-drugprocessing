@@ -74,8 +74,8 @@ Config.WeedLab = {
 --------------------------------
 
 Config.CokeProcessing = {
-	coke_pure = 1, -- Amount of Leaf Needed to Process
-	Processcoke_pure = math.random(2,7), -- Amount of Coke Received
+	coke = 1, -- Amount of Leaf Needed to Process
+	Processcoke = math.random(2,7), -- Amount of Coke Received
 	-- Processing Small Bricks --
 	Coke = 10, -- Amount of Coke Needed for Small Brick
 	BakingSoda = 5, -- Amount of Baking Soda Needed for Small Brick
