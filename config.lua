@@ -24,6 +24,7 @@ Config.CircleZones = {
 	ChemicalsField = {coords = vector3(1264.97, 1803.96, 82.94), name = ('Chemicals'), radius = 100.0},
 	ChemicalsConvertionMenu = {coords = vector3(3536.71, 3662.63, 28.12), name = ('Chemicals Process'), radius = 100.0},
 
+	CokeField = {coords = vector3(2806.5, 4774.46, 46.98), name = ('Coke'), radius = 100.0},
 	CokeProcessing = {coords = vector3(1087.14, -3195.31, -38.99), name = ('Coke Process'), radius = 20.0}, 
 	CokePowder = {coords = vector3(1092.9, -3196.65, -38.99), name = ('Powder Cutting'), radius = 20.0},--vector3(1092.9, -3196.65, -38.99)
 	CokeBrick = {coords = vector3(1099.57, -3194.35, -38.99), name = ('Brick Up Packages'), radius = 20.0},--vector3(1099.57, -3194.35, -38.99)
@@ -74,8 +75,8 @@ Config.WeedLab = {
 --------------------------------
 
 Config.CokeProcessing = {
-	coke = 1, -- Amount of Leaf Needed to Process
-	Processcoke = math.random(2,7), -- Amount of Coke Received
+	coke_pure = 1, -- Amount of Leaf Needed to Process
+	Processcoke_pure = math.random(2,7), -- Amount of Coke Received
 	-- Processing Small Bricks --
 	Coke = 10, -- Amount of Coke Needed for Small Brick
 	BakingSoda = 5, -- Amount of Baking Soda Needed for Small Brick
@@ -85,7 +86,7 @@ Config.CokeProcessing = {
 	LargeBrick = 1, -- Large Bricks Received
 }
 
---drug dealer blips, drug prices,put into corner selling,put into gang menu, make sure it fully works,
+--needs baking soda from somewhere,coke key to come somewhere,drug dealer blips, drug prices,put into corner selling,put into gang menu, make sure it fully works,
 
 --------------------------------
 -- METH PROCESSING AMOUNTS --
